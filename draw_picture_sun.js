@@ -1,7 +1,7 @@
 
 
 const scene = new THREE.Scene();
-document.getElementById("backbround_musics").src="./static/cinamon.mp3"
+document.getElementById("backbround_musics").src="static/cinamon.mp3"
 
 // 1. Background galaxy đẹp hơn (tím đen vũ trụ)
 function create_galaxy_texture() {
@@ -53,7 +53,7 @@ function create_stars() {
   geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
 
   const textureLoader = new THREE.TextureLoader();
-  const starTexture = textureLoader.load('.static/start.png'); 
+  const starTexture = textureLoader.load('static/start.png'); 
   const material = new THREE.PointsMaterial({
     size: 30,                    
     sizeAttenuation: true,
@@ -79,7 +79,7 @@ function createSun() {
 
   // Load texture
   const textureLoader = new THREE.TextureLoader(); // Đúng cách viết (T hoa)
-  const sunTexture = textureLoader.load('.static/sun.png'); // Đường dẫn giữ nguyên
+  const sunTexture = textureLoader.load('static/sun.png'); // Đường dẫn giữ nguyên
 
   // Material cho point
   const material = new THREE.PointsMaterial({
@@ -172,7 +172,7 @@ function createOrbitingPlanet(textureUrl, radius = 100, orbitRadius = 800, orbit
 
 
 const Mercury = createOrbitingPlanet(
-  '.static/Mercury.png',
+  'static/Mercury.png',
   35,
   390,
   0.3,
@@ -180,7 +180,7 @@ const Mercury = createOrbitingPlanet(
 );
 
 const venus = createOrbitingPlanet(
-  '.static/Venus.png',
+  'static/Venus.png',
   87,
   720,
   0.3,
@@ -190,7 +190,7 @@ const venus = createOrbitingPlanet(
 
 
 const earth = createOrbitingPlanet(
-  '.static/earth.png',   // đường dẫn texture
+  'static/earth.png',   // đường dẫn texture
   91,                      // bán kính hành tinh
   1000,                     // khoảng cách từ mặt trời (bán kính quỹ đạo)
   0.2,                     // tốc độ quỹ đạo (càng lớn càng nhanh)
@@ -203,7 +203,7 @@ const earth = createOrbitingPlanet(
 
 
 const mars = createOrbitingPlanet(
-  '.static/aa.png',
+  'static/aa.png',
   49,
   1200,
   0.3,
@@ -212,7 +212,7 @@ const mars = createOrbitingPlanet(
 
 
 const Jupiter = createOrbitingPlanet(
-  '.static/Jupiter.png',
+  'static/Jupiter.png',
   80,
   1500,
   0.3,
@@ -221,7 +221,7 @@ const Jupiter = createOrbitingPlanet(
 
 
 const satun = createOrbitingPlanet(
-  '.static/Saturn.png',
+  'static/Saturn.png',
   84,
   1800,
   0.3,
@@ -229,14 +229,14 @@ const satun = createOrbitingPlanet(
 );
 
 const uranus = createOrbitingPlanet(
-  '.static/Uranus.png',
+  'static/Uranus.png',
   110,
   2000,
   0.3,
   0.008
 );
 const neptun = createOrbitingPlanet(
-  '.static/Neptune.png',
+  'static/Neptune.png',
   105,
   2400,
   0.3,
@@ -363,7 +363,7 @@ function createPlanet(url, count) {
   return points;
 }
 
-const planetTextures = [".static/pl1.png",".static/pl2.png",".static/pl3.png",".static/pl4.png",".static/pl5.png",".static/pl7.png"];    
+const planetTextures = ["static/pl1.png","static/pl2.png","static/pl3.png","static/pl4.png","static/pl5.png","static/pl7.png"];    
 const planetCounts = [12,11,12,11,5,7];
 
 function add_planets() {
